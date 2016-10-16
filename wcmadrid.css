@@ -321,6 +321,14 @@ img {
 3.0 Header
 --------------------------------------------------------------*/
 .site-header hgroup {
+    float:left;
+    height:56px;
+    width:10%;
+    background: url('https://2017.madrid.wordcamp.org/files/2016/10/Captura-de-pantalla-2016-10-16-a-las-18.31.16.png') top left no-repeat transparent;
+    background-size: 141px 56px;
+}
+
+.site-header hgroup > * {
     height: 1px;
     left: -1000em;
     overflow: hidden;
@@ -329,15 +337,20 @@ img {
     width: 1px;
 }
 
+#masthead {
+    position: fixed;
+    width: 100%;
+    display: block;
+}
+
 /*--------------------------------------------------------------
 4.0 Navigation
 --------------------------------------------------------------*/
 .main-navigation {
     background-color: #fff;
     font-size: .875em;
-    position: fixed;
-    top: 0;
-    z-index: 10;
+    float:left;
+    width:80%;
 }
 
 .admin-bar .main-navigation {
