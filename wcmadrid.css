@@ -351,6 +351,7 @@ img {
     font-size: .875em;
     float:left;
     width:80%;
+    clear:none;
 }
 
 .admin-bar .main-navigation {
