@@ -584,7 +584,7 @@ body.home #primary {
 
 .single #content {
     margin-bottom: 40px;
-    padding: 40px;
+    padding: 0 40px 40px 40px;
 }
 
 .attachment-post-thumbnail {
@@ -1361,6 +1361,10 @@ body #page {
 
 body #main {
     margin: 270px auto 0;
+}
+
+body.single #main {
+    margin:155px auto 0;
 }
 
 #page .entry-header, #page .archive-header {
