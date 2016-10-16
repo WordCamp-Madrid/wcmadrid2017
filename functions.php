@@ -232,7 +232,7 @@ function wcbs_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 	wp_enqueue_style( 'wcmadrid', get_template_directory_uri() . '/wcmadrid.css' );
-	wp_enqueue_style( 'wcmadrid-jp',  'https://2017.madrid.wordcamp.org/wp-admin/admin-ajax.php?action=wordcamp_remote_css&ver=293' );
+	//wp_enqueue_style( 'wcmadrid-jp',  'https://2017.madrid.wordcamp.org/wp-admin/admin-ajax.php?action=wordcamp_remote_css&ver=293' );
 }
 add_action( 'wp_enqueue_scripts', 'wcbs_scripts' );
 
