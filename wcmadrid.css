@@ -113,7 +113,7 @@ body, button, input, select, textarea {
 
 a,
 a:visited {
-    color: #fea758;
+    color: #00b9eb;
     text-decoration: none;
 }
 
@@ -142,7 +142,6 @@ h1,
 
 .entry-title {
     margin-bottom: .5em;
-    text-align: center;
 }
 
 .entry-title a {
@@ -176,7 +175,7 @@ h6 {
 }
 
 .site {
-    background-color: #f6f6f6;
+    background-color: #fff;
     overflow: hidden;
     padding-top: 56px;
 }
@@ -241,6 +240,10 @@ img {
     margin: auto;
     max-width: 1100px;
     width: 100%;
+}
+
+#content .site-navigation {
+    padding:0 40px;
 }
 
 /* Column Classes -- 1140px -- 60px gutter
@@ -443,7 +446,7 @@ img {
 5.0 Hero Area
 --------------------------------------------------------------*/
 #after-header-widgets {
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/header.png') no-repeat center center fixed;
+    background: url('https://2017.madrid.wordcamp.org/files/2016/10/header.png') no-repeat center 85px fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -550,21 +553,29 @@ img {
     margin-bottom: 5em;
 }
 
+body.home #main {
+    margin:30px auto 0;
+}
+
+body.home #primary {
+    padding-top:0;
+}
+
 .site-content {
     float: left;
-    margin-top: -5%;
     margin-right: 2.7%;
     max-width: 770px;
     width: 70%;
 }
 
 .hentry {
-    background-color: #fff;
-    border-top: 10px solid #fea758;
     margin-bottom: 40px;
     padding: 40px;
 }
 
+#content .hentry:first-child {
+    padding-top:0;
+}
 .single .hentry {
     border: 0;
     margin-bottom: 0;
@@ -588,7 +599,6 @@ img {
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 30px;
-    text-align: center;
     text-transform: uppercase;
 }
 
@@ -831,7 +841,6 @@ li.comment .children {
 
 #secondary .widget {
     background-color: #fff;
-    border-top: 10px solid #0099a7;
     margin-bottom: 40px;
     padding: 40px 30px;
 }
@@ -942,7 +951,6 @@ a.sponsor-logo:hover {
 9.0 Footer
 --------------------------------------------------------------*/
 .site-footer {
-    background: url('https://sacramento.wordcamp.org/2015/files/2015/08/footer-bg.png') center bottom no-repeat;
     clear: both;
     color: #fff;
     font-size: 14px;
