@@ -1,0 +1,691 @@
+/*
+
+This is the Custom CSS for the WordCamp Los Angeles 2014 site.
+We'll develop the theme first, and then take the compiled CSS
+and add it to the site using Jetpack's Custom CSS module.
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Variables
+	1.1 - Fonts
+	1.2 - Colors
+2.0 - Typography
+	2.1 - Header
+3.0 - Elements and layout
+	3.1 - Elements
+	3.2 - Layout
+	3.3 - Subpage layouts
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+	5.3 - Secondary toggle
+6.0 - Widgets
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 - Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 Fonts
+--------------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*--------------------------------------------------------------
+1.2 Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.3 Mixins
+--------------------------------------------------------------*/
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v0.10.4
+* Docs at http://davidtheclark.github.io/scut
+*/
+/*--------------------------------------------------------------
+2.0 - Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 - Typography
+--------------------------------------------------------------*/
+/* line 5, sass/_typography.scss */
+body,
+button,
+input,
+select,
+textarea {
+  color: #555e68;
+  font-family: "Montserrat", sans-serif; }
+
+/* line 14, sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #fd7e23;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase; }
+
+/* line 22, sass/_typography.scss */
+h1.entry-title {
+  font-size: 38px;
+  font-size: 3.8rem; }
+
+/* line 28, sass/_typography.scss */
+h4 {
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: .5em 0; }
+
+/* line 39, sass/_typography.scss */
+.entry-meta {
+  font-size: 0.9em;
+  color: #6c7784; }
+
+/* line 44, sass/_typography.scss */
+.hentry {
+  border-bottom: 1px dotted #fd7e23;
+  padding-bottom: 1.5em; }
+
+/* line 50, sass/_typography.scss */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  margin: 0.5em 0.222em; }
+/* line 53, sass/_typography.scss */
+.entry-content h1 {
+  font-size: 2.25em; }
+/* line 54, sass/_typography.scss */
+.entry-content h2 {
+  font-size: 1.688em; }
+/* line 55, sass/_typography.scss */
+.entry-content h3 {
+  font-size: 1.5em; }
+/* line 56, sass/_typography.scss */
+.entry-content h4 {
+  font-size: 1.125em; }
+/* line 57, sass/_typography.scss */
+.entry-content h5 {
+  font-size: 1em; }
+/* line 58, sass/_typography.scss */
+.entry-content h6 {
+  font-size: 0.75em; }
+
+/* line 61, sass/_typography.scss */
+.comments-title {
+  font-size: 1.688em;
+  margin: 0.5em 0 0.222em; }
+
+/* line 66, sass/_typography.scss */
+.commentlist {
+  list-style-type: none;
+  margin: 1.5em 0; }
+  /* line 69, sass/_typography.scss */
+  .commentlist li.comment {
+    border-bottom: 1px dotted #fd7e23;
+    margin: 0 0 1.5em 0;
+    padding: 0 0 1.5em 0; }
+  /* line 74, sass/_typography.scss */
+  .commentlist footer {
+    overflow: hidden; }
+  /* line 77, sass/_typography.scss */
+  .commentlist .avatar {
+    float: left;
+    margin: 0 1em 0.5em 0; }
+  /* line 81, sass/_typography.scss */
+  .commentlist .comment-meta {
+    font-size: 0.9em;
+    color: #6c7784; }
+  /* line 85, sass/_typography.scss */
+  .commentlist .reply {
+    text-align: right; }
+  /* line 88, sass/_typography.scss */
+  .commentlist .comment-content {
+    margin: 1em 0 0 1em; }
+
+/*--------------------------------------------------------------
+3.0 - Elements and Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.1 - Elements
+--------------------------------------------------------------*/
+/* line 5, sass/_elements.scss */
+hr {
+  clear: both;
+  margin: 1em 0; }
+
+/*--------------------------------------------------------------
+3.2 - Layout
+--------------------------------------------------------------*/
+/* line 4, sass/_layout.scss */
+body {
+  background: url("http://2014.la.wordcamp.org/files/2014/05/wcla14_tileBG-footer.png") center bottom repeat-x; }
+
+/* Header */
+/* line 9, sass/_layout.scss */
+#masthead hgroup,
+#masthead nav div > ul {
+  float: none;
+  margin: 0 auto;
+  width: 100%; }
+
+/* line 17, sass/_layout.scss */
+#masthead {
+  background: url("http://2014.la.wordcamp.org/files/2014/06/wcla14_header-bgSub-opt.jpg") center top no-repeat black;
+  height: 400px;
+  position: relative; }
+  @media (max-width: 640px) {
+    /* line 17, sass/_layout.scss */
+    #masthead {
+      height: 380px; } }
+  @media (max-width: 480px) {
+    /* line 17, sass/_layout.scss */
+    #masthead {
+      height: 250px; } }
+  /* line 30, sass/_layout.scss */
+  .home #masthead {
+    background: url("http://2014.la.wordcamp.org/files/2014/06/wcla14_header-bgImg-fade-opt.jpg") center top no-repeat black;
+    height: 620px; }
+    @media (max-width: 640px) {
+      /* line 30, sass/_layout.scss */
+      .home #masthead {
+        height: 380px; } }
+    @media (max-width: 480px) {
+      /* line 30, sass/_layout.scss */
+      .home #masthead {
+        height: 250px; } }
+  /* line 43, sass/_layout.scss */
+  #masthead .site-title {
+    text-align: center; }
+    /* line 46, sass/_layout.scss */
+    #masthead .site-title a {
+      background-image: url("http://2014.la.wordcamp.org/files/2014/06/wcla14_logo-opt.png");
+      background-size: contain;
+      background-position: center top;
+      background-repeat: no-repeat;
+      font-size: 0px;
+      margin: 0 auto;
+      height: 300px;
+      display: block; }
+      /* line 56, sass/_layout.scss */
+      .home #masthead .site-title a {
+        height: 527px; }
+        @media (max-width: 870px) {
+          /* line 56, sass/_layout.scss */
+          .home #masthead .site-title a {
+            height: 449px; } }
+        @media (max-width: 640px) {
+          /* line 56, sass/_layout.scss */
+          .home #masthead .site-title a {
+            height: 300px; } }
+        @media (max-width: 480px) {
+          /* line 56, sass/_layout.scss */
+          .home #masthead .site-title a {
+            height: 160px; } }
+      @media (max-width: 480px) {
+        /* line 46, sass/_layout.scss */
+        #masthead .site-title a {
+          height: 160px; } }
+  /* line 78, sass/_layout.scss */
+  #masthead .site-description {
+    display: none; }
+
+/* Content & Sidebar */
+/* line 85, sass/_layout.scss */
+#page {
+  background: url("http://2014.la.wordcamp.org/files/2014/05/wcla14_tileBG-features.png") center 400px repeat-x; }
+  @media (max-width: 640px) {
+    /* line 85, sass/_layout.scss */
+    #page {
+      background-position: center 380px; } }
+  @media (max-width: 480px) {
+    /* line 85, sass/_layout.scss */
+    #page {
+      background-position: center 250px; } }
+  /* line 96, sass/_layout.scss */
+  .home #page {
+    background: url("http://2014.la.wordcamp.org/files/2014/05/wcla14_tileBG-features.png") center 620px repeat-x; }
+    @media (max-width: 640px) {
+      /* line 96, sass/_layout.scss */
+      .home #page {
+        background-position: center 380px; } }
+    @media (max-width: 480px) {
+      /* line 96, sass/_layout.scss */
+      .home #page {
+        background-position: center 250px; } }
+
+/* line 109, sass/_layout.scss */
+#main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px; }
+  /* line 10, sass/_scut.scss */
+  #main:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 117, sass/_layout.scss */
+#colophon {
+  clear: both;
+  margin: 0 auto;
+  width: 100%; }
+
+/* line 123, sass/_layout.scss */
+#primary {
+  float: left;
+  width: 72%;
+  margin-left: 1.5%; }
+  @media (max-width: 640px) {
+    /* line 123, sass/_layout.scss */
+    #primary {
+      float: none;
+      width: 90%;
+      margin: 1em auto; } }
+
+/* line 135, sass/_layout.scss */
+#secondary {
+  float: right;
+  width: 22%;
+  margin-right: 1.5%; }
+  @media (max-width: 640px) {
+    /* line 135, sass/_layout.scss */
+    #secondary {
+      float: none;
+      width: 90%;
+      margin: 1em auto; } }
+
+/* Tickets */
+/* line 149, sass/_layout.scss */
+.tix_tickets_table th,
+.tix_tickets_table td {
+  padding: 5px; }
+
+/* Footer */
+/* line 155, sass/_layout.scss */
+#colophon {
+  padding: 20px 0; }
+  /* line 158, sass/_layout.scss */
+  #colophon .site-info-generator {
+    display: block;
+    text-align: center; }
+    /* line 162, sass/_layout.scss */
+    #colophon .site-info-generator:before {
+      content: url("http://2014.la.wordcamp.org/files/2014/05/wcla14_greyW-transparentBg.png");
+      display: block; }
+  /* line 168, sass/_layout.scss */
+  #colophon .site-info-network {
+    position: absolute;
+    top: 12px;
+    left: 4px; }
+    @media (max-width: 480px) {
+      /* line 168, sass/_layout.scss */
+      #colophon .site-info-network {
+        top: 6px;
+        font-size: 11px;
+        font-size: 1.1rem; } }
+
+/*--------------------------------------------------------------
+3.3 - Subpage layouts
+--------------------------------------------------------------*/
+/* Organizers Page */
+/* line 6, sass/_subpages.scss */
+.wcorg-organizers {
+  clear: both;
+  overflow: hidden; }
+  /* line 10, sass/_subpages.scss */
+  .wcorg-organizers .wcorg-organizer {
+    float: left;
+    padding: 1%;
+    width: 23%; }
+    @media (max-width: 870px) {
+      /* line 10, sass/_subpages.scss */
+      .wcorg-organizers .wcorg-organizer {
+        width: 48%; } }
+    /* line 18, sass/_subpages.scss */
+    .wcorg-organizers .wcorg-organizer img {
+      margin: 1em 0;
+      display: block;
+      width: 80%;
+      padding: 10%;
+      background: #dde3e6; }
+  /* line 26, sass/_subpages.scss */
+  .wcorg-organizers .sharedaddy {
+    display: none; }
+
+/* Speakers Page */
+/* line 33, sass/_subpages.scss */
+.wcb_speaker .sharedaddy {
+  display: none; }
+/* line 36, sass/_subpages.scss */
+.wcb_speaker .avatar {
+  float: left;
+  margin: 0 1em 0.5em 0; }
+
+/* line 42, sass/_subpages.scss */
+.speaker-gravatar-list {
+  margin-bottom: 2.25em; }
+
+/* Sponsors Page */
+/* line 48, sass/_subpages.scss */
+.wcb_sponsor .sharedaddy {
+  display: none; }
+
+/* Attendees Page */
+/* line 54, sass/_subpages.scss */
+#tix-attendees .tix-attendee-list {
+  list-style: none;
+  margin-left: 0; }
+  /* line 58, sass/_subpages.scss */
+  #tix-attendees .tix-attendee-list li {
+    display: inline-block;
+    margin-left: -4px;
+    padding: 1.5%;
+    text-align: center;
+    width: 22%;
+    vertical-align: top; }
+    @media (max-width: 870px) {
+      /* line 58, sass/_subpages.scss */
+      #tix-attendees .tix-attendee-list li {
+        width: 30%; } }
+    @media (max-width: 480px) {
+      /* line 58, sass/_subpages.scss */
+      #tix-attendees .tix-attendee-list li {
+        width: 47%; } }
+    /* line 73, sass/_subpages.scss */
+    #tix-attendees .tix-attendee-list li .avatar {
+      height: auto;
+      float: none;
+      max-width: 50%;
+      width: auto; }
+    /* line 80, sass/_subpages.scss */
+    #tix-attendees .tix-attendee-list li .tix-field {
+      margin-left: 0; }
+
+/* Schedule Page(s) */
+/* line 87, sass/_subpages.scss */
+.wcpt-schedule {
+  margin: 1em 0; }
+  /* line 89, sass/_subpages.scss */
+  .wcpt-schedule thead th {
+    background: #fd7e23;
+    color: white;
+    text-transform: uppercase; }
+  /* line 94, sass/_subpages.scss */
+  .wcpt-schedule th, .wcpt-schedule td {
+    padding: 0.5em; }
+  /* line 97, sass/_subpages.scss */
+  .wcpt-schedule td {
+    border-bottom: 1px solid #ffc097;
+    padding: 1em 0.5em; }
+  /* line 101, sass/_subpages.scss */
+  .wcpt-schedule .wcpt-session-title {
+    display: block;
+    font-size: 1.125em; }
+  /* line 105, sass/_subpages.scss */
+  .wcpt-schedule .wcpt-col-time {
+    width: 14%; }
+  /* line 108, sass/_subpages.scss */
+  .wcpt-schedule .wcpt-col-track {
+    width: 28%; }
+  /* line 111, sass/_subpages.scss */
+  .wcpt-schedule .wcpt-session-speakers {
+    display: block;
+    font-style: italic;
+    margin: 1em 0 0 0; }
+    /* line 115, sass/_subpages.scss */
+    .wcpt-schedule .wcpt-session-speakers:before {
+      content: 'Speaker: '; }
+    /* line 118, sass/_subpages.scss */
+    .wcpt-schedule .wcpt-session-speakers a {
+      color: #14b59d; }
+  /* line 122, sass/_subpages.scss */
+  .wcpt-schedule .lunch-break td {
+    background: #ffdfcb; }
+    /* line 124, sass/_subpages.scss */
+    .wcpt-schedule .lunch-break td .scb-session-lunch-break {
+      text-align: center; }
+
+/* Responsive columns for use inside page/post content since we can't use shortcodes */
+/* line 135, sass/_subpages.scss */
+.cols2 .cols, .cols3 .cols, .cols4 .cols {
+  padding: 1.5%; }
+
+/* line 10, sass/_scut.scss */
+.cols2:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* line 142, sass/_subpages.scss */
+.cols2 .col {
+  float: left;
+  width: 47%; }
+  @media (max-width: 640px) {
+    /* line 142, sass/_subpages.scss */
+    .cols2 .col {
+      float: none;
+      width: 97%; } }
+
+/* line 10, sass/_scut.scss */
+.cols3:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* line 154, sass/_subpages.scss */
+.cols3 .col {
+  float: left;
+  width: 30%; }
+  @media (max-width: 640px) {
+    /* line 154, sass/_subpages.scss */
+    .cols3 .col {
+      float: none;
+      width: 97%; } }
+
+/* line 10, sass/_scut.scss */
+.cols4:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* line 166, sass/_subpages.scss */
+.cols4 .col {
+  float: left;
+  width: 22%; }
+  @media (max-width: 870px) {
+    /* line 166, sass/_subpages.scss */
+    .cols4 .col {
+      width: 47%; } }
+  @media (max-width: 640px) {
+    /* line 166, sass/_subpages.scss */
+    .cols4 .col {
+      float: none;
+      width: 97%; } }
+
+/*--------------------------------------------------------------
+4.0 - Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.0 - Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.0 - Navigation
+--------------------------------------------------------------*/
+/* line 4, sass/_navigation.scss */
+nav.main-navigation {
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 0; }
+  /* line 15, sass/_navigation.scss */
+  nav.main-navigation .menu-primary-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto; }
+  /* line 21, sass/_navigation.scss */
+  nav.main-navigation .menu {
+    height: 65px;
+    line-height: 65px; }
+    /* line 26, sass/_navigation.scss */
+    nav.main-navigation .menu li a {
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+      font-size: 1.8rem;
+      padding: 0 16px;
+      text-shadow: 1px 1px 1px #fff;
+      text-transform: uppercase;
+      -webkit-transition: all 200ms ease-in-out;
+      -moz-transition: all 200ms ease-in-out;
+      -ms-transition: all 200ms ease-in-out;
+      -o-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out; }
+      @media (max-width: 870px) {
+        /* line 26, sass/_navigation.scss */
+        nav.main-navigation .menu li a {
+          font-size: 16px;
+          font-size: 1.6rem;
+          padding: 0 0.75em; } }
+    /* line 43, sass/_navigation.scss */
+    nav.main-navigation .menu li:hover > a {
+      background: white;
+      background: rgba(255, 255, 255, 0.5); }
+    /* line 48, sass/_navigation.scss */
+    nav.main-navigation .menu li ul {
+      background: white;
+      background: rgba(255, 255, 255, 0.9);
+      top: 65px; }
+      /* line 53, sass/_navigation.scss */
+      nav.main-navigation .menu li ul li:hover > a {
+        background: #45ead2; }
+
+/* line 61, sass/_navigation.scss */
+.main-small-navigation {
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  padding: 1em 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%; }
+  /* line 71, sass/_navigation.scss */
+  .main-small-navigation .menu-toggle {
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: center; }
+  /* line 80, sass/_navigation.scss */
+  .main-small-navigation #menu-primary {
+    position: absolute;
+    top: 4.25em;
+    bottom: auto;
+    z-index: 100;
+    background: white;
+    background: rgba(255, 255, 255, 0.7); }
+    /* line 88, sass/_navigation.scss */
+    .main-small-navigation #menu-primary ul li {
+      list-style: none; }
+
+/*--------------------------------------------------------------
+5.1 - Links
+--------------------------------------------------------------*/
+/* line 97, sass/_navigation.scss */
+a,
+a:active,
+a:visited {
+  color: #fd7e23;
+  text-decoration: none; }
+
+/* line 104, sass/_navigation.scss */
+a:hover {
+  color: #ffc097; }
+
+/* line 109, sass/_navigation.scss */
+#colophon a,
+#colophon a:active,
+#colophon a:visited {
+  color: #555e68;
+  text-shadow: 1px 1px 1px #fff; }
+/* line 116, sass/_navigation.scss */
+#colophon a:hover {
+  color: #555e68; }
+/* line 120, sass/_navigation.scss */
+#colophon a.site-info-network {
+  color: #ffc097;
+  text-shadow: 1px 1px 1px #000; }
+
+/*--------------------------------------------------------------
+6.0 - Widgets
+--------------------------------------------------------------*/
+/* line 4, sass/_widgets.scss */
+#primary-sidebar aside h1 {
+  background: #fd7e23;
+  color: #fff;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 12px;
+  padding: 24px 0 0 0;
+  text-align: center;
+  text-transform: uppercase; }
+/* line 15, sass/_widgets.scss */
+#primary-sidebar aside a {
+  text-decoration: none; }
+/* line 19, sass/_widgets.scss */
+#primary-sidebar aside ul {
+  list-style: none;
+  margin: 0 0 1.5em 0; }
+  /* line 23, sass/_widgets.scss */
+  #primary-sidebar aside ul li {
+    padding: .5em; }
+
+/* After Header Widgets */
+/* line 31, sass/_widgets.scss */
+#after-header-widgets {
+  clear: both;
+  margin: 40px auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px; }
+  /* line 38, sass/_widgets.scss */
+  #after-header-widgets .widget {
+    float: left;
+    text-align: center;
+    width: 25%; }
+    /* line 43, sass/_widgets.scss */
+    #after-header-widgets .widget > div {
+      padding: 0 1em; }
+    @media (max-width: 640px) {
+      /* line 38, sass/_widgets.scss */
+      #after-header-widgets .widget {
+        width: 47.5%;
+        margin: 0 1% 1em 1%;
+        overflow-wrap: break-word;
+        min-height: 330px;
+        min-height: 33rem; } }
+    @media (max-width: 480px) {
+      /* line 38, sass/_widgets.scss */
+      #after-header-widgets .widget {
+        float: none;
+        width: 95%;
+        margin: 1em auto;
+        min-height: auto; } }
+    /* line 61, sass/_widgets.scss */
+    #after-header-widgets .widget img {
+      -webkit-transition: all 200ms ease-in-out;
+      -moz-transition: all 200ms ease-in-out;
+      -ms-transition: all 200ms ease-in-out;
+      -o-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out; }
+    /* line 65, sass/_widgets.scss */
+    #after-header-widgets .widget:hover img {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+
+/* line 72, sass/_widgets.scss */
+#searchform .field {
+  max-width: 100%; }

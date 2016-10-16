@@ -1,163 +1,181 @@
 <?php
 /**
- * Implement an optional custom header for Twenty Twelve
+ * Sample implementation of the Custom Header feature
+ * http://codex.wordpress.org/Custom_Headers
  *
- * See https://codex.wordpress.org/Custom_Headers
+ * You can add an optional custom header image to header.php like so ...
+
+	<?php $header_image = get_header_image();
+	if ( ! empty( $header_image ) ) { ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+		</a>
+	<?php } // if ( ! empty( $header_image ) ) ?>
+
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package WCBS
+ * @since WCBS 1.0
  */
 
 /**
- * Set up the WordPress core custom header arguments and settings.
+ * Setup the WordPress core custom header feature.
  *
- * @uses add_theme_support() to register support for 3.4 and up.
- * @uses twentytwelve_header_style() to style front end.
- * @uses twentytwelve_admin_header_style() to style wp-admin form.
- * @uses twentytwelve_admin_header_image() to add custom markup to wp-admin form.
+ * Use add_theme_support to register support for WordPress 3.4+
+ * as well as provide backward compatibility for previous versions.
+ * Use feature detection of wp_get_theme() which was introduced
+ * in WordPress 3.4.
  *
- * @since Twenty Twelve 1.0
+ * @uses wcbs_header_style()
+ * @uses wcbs_admin_header_style()
+ * @uses wcbs_admin_header_image()
+ *
+ * @package WCBS
  */
-function twentytwelve_custom_header_setup() {
+function wcbs_custom_header_setup() {
 	$args = array(
-		// Text color and image (empty to use none).
-		'default-text-color'     => '515151',
 		'default-image'          => '',
-
-		// Set height and width, with a maximum value for the width.
+		'default-text-color'     => '000',
+		'width'                  => 1000,
 		'height'                 => 250,
-		'width'                  => 960,
-		'max-width'              => 2000,
-
-		// Support flexible height and width.
 		'flex-height'            => true,
-		'flex-width'             => true,
-
-		// Random image rotation off by default.
-		'random-default'         => false,
-
-		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'       => 'twentytwelve_header_style',
-		'admin-head-callback'    => 'twentytwelve_admin_header_style',
-		'admin-preview-callback' => 'twentytwelve_admin_header_image',
+		'wp-head-callback'       => 'wcbs_header_style',
+		'admin-head-callback'    => 'wcbs_admin_header_style',
+		'admin-preview-callback' => 'wcbs_admin_header_image',
 	);
 
-	add_theme_support( 'custom-header', $args );
+	$args = apply_filters( 'wcbs_custom_header_args', $args );
+
+	if ( function_exists( 'wp_get_theme' ) ) {
+		add_theme_support( 'custom-header', $args );
+	} else {
+		// Compat: Versions of WordPress prior to 3.4.
+		define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
+		define( 'HEADER_IMAGE',        $args['default-image'] );
+		define( 'HEADER_IMAGE_WIDTH',  $args['width'] );
+		define( 'HEADER_IMAGE_HEIGHT', $args['height'] );
+		add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
+	}
 }
-add_action( 'after_setup_theme', 'twentytwelve_custom_header_setup' );
+add_action( 'after_setup_theme', 'wcbs_custom_header_setup' );
 
 /**
- * Load our special font CSS file.
+ * Shiv for get_custom_header().
  *
- * @since Twenty Twelve 1.2
+ * get_custom_header() was introduced to WordPress
+ * in version 3.4. To provide backward compatibility
+ * with previous versions, we will define our own version
+ * of this function.
+ *
+ * @return stdClass All properties represent attributes of the curent header image.
+ *
+ * @package WCBS
+ * @since WCBS 1.1
  */
-function twentytwelve_custom_header_fonts() {
-	$font_url = twentytwelve_get_font_url();
-	if ( ! empty( $font_url ) )
-		wp_enqueue_style( 'twentytwelve-fonts', esc_url_raw( $font_url ), array(), null );
-}
-add_action( 'admin_print_styles-appearance_page_custom-header', 'twentytwelve_custom_header_fonts' );
 
+if ( ! function_exists( 'get_custom_header' ) ) {
+	function get_custom_header() {
+		return (object) array(
+			'url'           => get_header_image(),
+			'thumbnail_url' => get_header_image(),
+			'width'         => HEADER_IMAGE_WIDTH,
+			'height'        => HEADER_IMAGE_HEIGHT,
+		);
+	}
+}
+
+if ( ! function_exists( 'wcbs_header_style' ) ) :
 /**
- * Style the header text displayed on the blog.
+ * Styles the header image and text displayed on the blog
  *
- * get_header_textcolor() options: 515151 is default, hide text (returns 'blank'), or any hex value.
+ * @see wcbs_custom_header_setup().
  *
- * @since Twenty Twelve 1.0
+ * @since WCBS 1.0
  */
-function twentytwelve_header_style() {
-	$text_color = get_header_textcolor();
+function wcbs_header_style() {
 
 	// If no custom options for text are set, let's bail
-	if ( $text_color == get_theme_support( 'custom-header', 'default-text-color' ) )
+	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+	if ( HEADER_TEXTCOLOR == get_header_textcolor() )
 		return;
-
-	// If we get this far, we have custom styles.
+	// If we get this far, we have custom styles. Let's do this.
 	?>
-	<style type="text/css" id="twentytwelve-header-css">
+	<style type="text/css">
 	<?php
 		// Has the text been hidden?
-		if ( ! display_header_text() ) :
+		if ( 'blank' == get_header_textcolor() ) :
 	?>
 		.site-title,
 		.site-description {
-			position: absolute;
-			clip: rect(1px 1px 1px 1px); /* IE7 */
+			position: absolute !important;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 			clip: rect(1px, 1px, 1px, 1px);
 		}
 	<?php
-		// If the user has set a custom color for the text, use that.
+		// If the user has set a custom color for the text use that
 		else :
 	?>
-		.site-header h1 a,
-		.site-header h2 {
-			color: #<?php echo $text_color; ?>;
+		.site-title a,
+		.site-description {
+			color: #<?php echo get_header_textcolor(); ?> !important;
 		}
 	<?php endif; ?>
 	</style>
 	<?php
 }
+endif; // wcbs_header_style
 
+if ( ! function_exists( 'wcbs_admin_header_style' ) ) :
 /**
- * Style the header image displayed on the Appearance > Header admin panel.
+ * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @since Twenty Twelve 1.0
+ * @see wcbs_custom_header_setup().
+ *
+ * @since WCBS 1.0
  */
-function twentytwelve_admin_header_style() {
+function wcbs_admin_header_style() {
 ?>
-	<style type="text/css" id="twentytwelve-admin-header-css">
+	<style type="text/css">
 	.appearance_page_custom-header #headimg {
 		border: none;
-		font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	}
 	#headimg h1,
-	#headimg h2 {
-		line-height: 1.84615;
-		margin: 0;
-		padding: 0;
+	#desc {
 	}
 	#headimg h1 {
-		font-size: 26px;
 	}
 	#headimg h1 a {
-		color: #515151;
-		text-decoration: none;
 	}
-	#headimg h1 a:hover {
-		color: #21759b !important; /* Has to override custom inline style. */
-	}
-	#headimg h2 {
-		color: #757575;
-		font-size: 13px;
-		margin-bottom: 24px;
+	#desc {
 	}
 	#headimg img {
-		max-width: <?php echo get_theme_support( 'custom-header', 'max-width' ); ?>px;
 	}
 	</style>
 <?php
 }
+endif; // wcbs_admin_header_style
 
+if ( ! function_exists( 'wcbs_admin_header_image' ) ) :
 /**
- * Output markup to be displayed on the Appearance > Header admin panel.
+ * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * This callback overrides the default markup displayed there.
+ * @see wcbs_custom_header_setup().
  *
- * @since Twenty Twelve 1.0
+ * @since WCBS 1.0
  */
-function twentytwelve_admin_header_image() {
-	$style = 'color: #' . get_header_textcolor() . ';';
-	if ( ! display_header_text() ) {
-		$style = 'display: none;';
-	}
-	?>
+function wcbs_admin_header_image() { ?>
 	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name" style="<?php echo esc_attr( $style ); ?>" onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 id="desc" class="displaying-header-text" style="<?php echo esc_attr( $style ); ?>"><?php bloginfo( 'description' ); ?></h2>
+		<?php
+		if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) )
+			$style = ' style="display:none;"';
+		else
+			$style = ' style="color:#' . get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) . ';"';
+		?>
+		<h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<div id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="" />
+			<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
 		<?php endif; ?>
 	</div>
 <?php }
+endif; // wcbs_admin_header_image
