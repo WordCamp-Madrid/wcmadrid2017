@@ -445,7 +445,7 @@ img {
 /*--------------------------------------------------------------
 5.0 Hero Area
 --------------------------------------------------------------*/
-#after-header-widgets {
+body.home #after-header-widgets {
     background: url('https://2017.madrid.wordcamp.org/files/2016/10/header.png') no-repeat center 85px fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -583,8 +583,6 @@ body.home #primary {
 }
 
 .single #content {
-    background-color: #fff;
-    border-top: 10px solid #fea758;
     margin-bottom: 40px;
     padding: 40px;
 }
@@ -1073,6 +1071,7 @@ input[type="submit"]:hover {
         width: 200px;
     }
 
+
     #before-content-widgets {
         margin: 40px 0 0;
     }
@@ -1227,4 +1226,287 @@ input[type="submit"]:hover {
     .sub-menu {
         margin-bottom: 0;
     }
+}
+
+
+/** CUSTOM **/
+/** *
+*
+* WC Madrid 2017
+*
+* **/
+/*
+Te damos la bienvenida a CSS personalizado
+
+Para saber cómo funciona, ve a http://wp.me/PEmnE-Bt
+*/
+/* ********** GENERALS ********** */
+html, body {
+    font-family: 'Droid Sans', sans-serif;
+    color: #4a4a4a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kreon', serif;
+    color: #17465d;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* ********** HEADER ********** */
+.site-header {
+    position: relative;
+    width: 100%;
+    height: 85px;
+    padding: 0;
+    background-color: #17465d;
+    z-index: 9999;
+}
+
+.main-navigation {
+    position: relative;
+    top: 0 !important;
+    max-width: none;
+    background-color: #17465d;
+}
+
+.main-navigation ul.menu {
+    float: right;
+    max-width: none;
+    width: auto;
+}
+
+.main-navigation ul.menu li {
+    float: left;
+}
+
+.main-navigation ul.menu li.menu-item > a {
+    line-height: 85px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: none;
+    padding: 0 15px;
+}
+
+.main-navigation ul.menu li.menu-item > a:hover {
+    color: #f4bd5d;
+    background-color: #103040;
+}
+
+.main-navigation ul.menu li.menu-item > a:hover:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: 85px;
+    border-width: 8px 12px;
+    border-style: solid;
+    border-color: #103040 #103040 transparent transparent;
+}
+
+.main-navigation li a::after {
+    content: '';
+    padding: 0;
+}
+
+.main-navigation ul.menu li.current-menu-item,
+.main-navigation ul.menu > li.current-menu-item > a {
+    background-color: #103040 !important;
+}
+
+.main-navigation ul.menu li.current-menu-item:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: 85px;
+    border-width: 8px 12px;
+    border-style: solid;
+    border-color: #103040 #103040 transparent transparent;
+}
+
+/* ********** WIDGETS HOME ********** */
+#before-content-widgets .widget-title {
+    text-align: center;
+}
+
+#before-content-widgets .widget_text {
+    background-color: transparent;
+}
+
+#before-content-widgets .widget_text {
+    width: 33%;
+    float: left;
+    padding: 40px !important;
+    background-color: transparent !important;
+}
+
+/* ********** BODY & CONTENT ********** */
+body #page {
+    padding: 0;
+}
+
+body #main {
+    margin: 270px auto 0;
+}
+
+#page .entry-header, #page .archive-header {
+    height: auto;
+    padding: 0;
+}
+
+body.blog #page .entry-header h1,
+body.archive #page .entry-header h1,
+body #page .entry-header h1,
+body #page .archive-header h1 {
+    line-height: 34px;
+    font-family: 'Kreon', serif;
+    font-size: 34px;
+    color: #17465d;
+    text-transform: none;
+}
+
+body.single .entry-content,
+.entry-content {
+    padding: 20px 0;
+}
+
+.entry-content h2 {
+    line-height: 24px;
+    font-family: 'Kreon', serif;
+    font-size: 24px;
+    color: #17465d;
+    text-transform: none;
+}
+
+.entry-header .entry-title a,
+.entry-header .entry-title a:hover,
+.entry-content h2 {
+    color: #17465d;
+}
+
+#page footer.entry-meta {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 500;
+    color: #17465d;
+}
+
+#page footer.entry-meta a,
+#page footer.entry-meta a:hover {
+    color: #17465d;
+}
+
+.entry-content a, .comment-content a,
+.entry-content a:hover, .comment-content a:hover,
+.entry-content a:visited, .comment-content a:visited {
+    color: #17465d;
+}
+
+p.wp-caption-text,
+.entry-content p:last-of-type, .entry-summary p:last-of-type, .comment-content p:last-of-type, .mu_register p:last-of-type {
+    margin: 0 0 20px;
+}
+
+.wp-caption {
+    width: 100% !important;
+    line-height: .75em;
+}
+
+.wp-caption .wp-caption-text, .gallery-caption, .entry-caption {
+    position: relative;
+    clear: both;
+    min-height: 30px;
+    font-size: 14px;
+    font-style: normal;
+    color: #4a4a4a;
+    padding: 5px 20px;
+    background-color: #f4bd5d;
+}
+
+.wp-caption-text:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 20px;
+    bottom: -12px;
+    border-width: 6px 9px;
+    border-style: solid;
+    border-color: #f4bd5d #f4bd5d transparent transparent;
+}
+
+.wcorg-speakers h2 {
+    line-height: 34px;
+    font-size: 34px;
+}
+
+/* ********** SIDEBAR WIDGETS ********** */
+#secondary {
+    width: 30%;
+    padding: 0;
+    margin: 0;
+}
+
+#page .widget {
+    background: #ffffff;
+    margin: 0 0 32px;
+    padding: 0 20px;
+}
+
+.widget-area .widget h3 {
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    line-height: normal;
+    font-family: 'Kreon', serif;
+    font-size: 24px;
+    color: #17465d;
+    text-transform: none;
+    text-align: left;
+    padding: 0;
+    border: 0;
+}
+
+.jetpack_subscription_widget form {
+    padding: 0;
+}
+
+/* ********** FOOTER ********** */
+#colophon {
+    height: 85px;
+    color: #80d2d0;
+    background-color: #17465d;
+}
+
+footer[role="contentinfo"] a {
+    color: #80d2d0;
+}
+
+footer[role="contentinfo"] a:hover {
+    color: #ffffff;
+}
+
+.site-info {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px;
+    line-height: 85px;
+    text-transform: none;
+}
+
+.site-info::after {
+    content: "Build With Intention";
 }
