@@ -1,6 +1,6 @@
 /** *
 *
-* WC Bilbao 2016
+* WC Madrid 2017
 *
 * **/
 /*--------------------------------------------------------------
@@ -22,7 +22,7 @@
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
-.page-id-7 #primary {
+/*.page-id-7 #primary {
     width: 100%;
     max-width: 100%;
 }
@@ -90,7 +90,7 @@
 
 .page-id-339 .entry-header {
     display: none;
-}
+}*/
 
 * {
     -moz-box-sizing: border-box;
@@ -98,7 +98,7 @@
     box-sizing: border-box;
 }
 
-html,body {
+html, body {
     height: 100%;
 }
 
@@ -324,11 +324,10 @@ img {
 3.0 Header
 --------------------------------------------------------------*/
 .site-header hgroup {
-    float:left;
-    height:56px;
-    width:10%;
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/Captura-de-pantalla-2016-10-16-a-las-18.31.16.png') top left no-repeat transparent;
-    background-size: 141px 56px;
+    float: left;
+    width: 204px;
+    height: 75px;
+    background: url('https://2017.madrid.wordcamp.org/files/2016/10/wcmadrid17-1.png') top left no-repeat transparent;
 }
 
 .site-header hgroup > * {
