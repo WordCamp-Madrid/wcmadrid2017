@@ -470,17 +470,22 @@ body #after-header-widgets {
 }
 
 body.home #after-header-widgets {
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-home.png') no-repeat center 85px fixed;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+    background: url(https://2017.madrid.wordcamp.org/files/2016/10/bg-home.png);
+    background-size: cover;
     height: 608px;
+    min-width: 608px;
+    background-position: center center;
 
     /* Center the logo and dates */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #after-header-widgets .textwidget {
@@ -598,7 +603,12 @@ body.home #main {
 
 
 body.home #primary:before {
-    content: "<h4 class='header__primary__h'>Blog</h4>";
+    content: "Blog";
+    padding-left: 40px;
+    margin-bottom: 20px;
+    display: block;
+    font-family: "Kreon";
+    font-size: 24px;
 }
 
 body.home #primary {
