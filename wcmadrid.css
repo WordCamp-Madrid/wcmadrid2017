@@ -466,7 +466,8 @@ img {
 5.0 Hero Area
 --------------------------------------------------------------*/
 body #after-header-widgets {
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-site.png') no-repeat center 85px fixed;
+    background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-site.png');
+    background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
