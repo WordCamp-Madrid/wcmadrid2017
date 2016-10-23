@@ -1336,10 +1336,7 @@ input[type="submit"]:hover {
     #wpadminbar {
         position: fixed;
     }
-    
-    #masthead {
-        min-height: 75px;
-    }
+
     
     .main-navigation {
         margin-right: 5px;
