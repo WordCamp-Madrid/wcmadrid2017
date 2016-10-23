@@ -1487,7 +1487,7 @@ input[type="submit"]:hover {
 
 
 /* Mauricio Gelves's ways: Mobile first */
-@media (max-width: 767px) { 
+@media (min-width: 767px) { 
     body.home #after-header-widgets { height: 410px; }
 
 
