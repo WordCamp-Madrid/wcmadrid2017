@@ -441,7 +441,6 @@ img {
 
 .main-navigation ul.menu li ul.sub-menu {
     top: initial;
-    width: 100%;
     box-shadow: initial;
     -moz-box-shadow: initial;
     background-color: #17465d;
@@ -469,6 +468,40 @@ img {
     height: 0;
     border: 0;
 }
+
+
+
+
+/* Main Menu */
+.menu-toggle {
+    position: relative;
+    float: right;
+    clear: none;
+    line-height: 75px;
+    width: 100px;
+    height: 75px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #103040;
+}
+
+.menu-toggle:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: 75px;
+    border-width: 8px 12px;
+    border-style: solid;
+    border-color: #103040 #103040 transparent transparent;
+}
+
 
 /*--------------------------------------------------------------
 5.0 Hero Area
@@ -1279,6 +1312,7 @@ input[type="submit"]:hover {
 
 }
 
+
 @media (max-width: 767px) {
     #primary,
     #secondary {
@@ -1337,36 +1371,6 @@ input[type="submit"]:hover {
     
     #tix-attendees .tix-columns-2 li {
         width: 100%;
-    }
-    
-    /* Main Menu */
-    .menu-toggle {
-        position: relative;
-        float: right;
-        clear: none;
-        line-height: 75px;
-        width: 100px;
-        height: 75px;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1em;
-        font-weight: 600;
-        color: #fff;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        background-color: #103040;
-    }
-    
-    .menu-toggle:before {
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: 20px;
-        top: 75px;
-        border-width: 8px 12px;
-        border-style: solid;
-        border-color: #103040 #103040 transparent transparent;
     }
     
     .main-small-navigation .menu {
