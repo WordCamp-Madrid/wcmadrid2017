@@ -504,11 +504,7 @@ body.home #after-header-widgets {
             justify-content: center;
 }
 
-.header__primary__logo {
-    bottom: 41px;
-    left: 5%;
-    position: absolute;
-}
+.header__primary__logo { display: none; }
 
 #after-header-widgets .textwidget {
     display: block;
@@ -1493,8 +1489,26 @@ input[type="submit"]:hover {
 /* Mauricio Gelves's ways: Mobile first */
 @media (max-width: 767px) { 
     body.home #after-header-widgets { height: 410px; }
+
+
+    .header__primary__logo {
+        display: block;
+        bottom: 19px;
+        left: 5%;
+        position: absolute;
+        height: 109px;
+        width: 109px;
+    }
 }
 
 @media (min-width: 992px) {
     body.home #after-header-widgets { height: 608px; }
+
+
+
+    .header__primary__logo {
+        bottom: 41px;
+        height: 154px;
+        width: 154px;
+    }
 }
