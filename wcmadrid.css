@@ -351,6 +351,16 @@ img {
     display: none;
 }
 
+.site-description { display: none; }
+.site-title {
+    cursor: pointer;
+    margin: 0;
+}
+    .site-title a {
+        height: 72px;
+        display: block;
+    }
+
 /*--------------------------------------------------------------
 4.0 Navigation
 --------------------------------------------------------------*/
