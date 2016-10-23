@@ -470,7 +470,7 @@ body #after-header-widgets {
 }
 
 body.home #after-header-widgets {
-    background: url(https://2017.madrid.wordcamp.org/files/2016/10/bg-home.png);
+    background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-home.jpg');
     background-size: cover;
     height: 608px;
     min-width: 608px;
