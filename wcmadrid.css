@@ -337,6 +337,9 @@ img {
     margin-left: 100px;
     background: url(https://2017.madrid.wordcamp.org/files/2016/10/wordcamp-madrid-2017.png) no-repeat transparent;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .site-header hgroup > * {
@@ -468,10 +471,10 @@ body #after-header-widgets {
 
 body.home #after-header-widgets {
     background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-home.png') no-repeat center 85px fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
     height: 608px;
 }
 
