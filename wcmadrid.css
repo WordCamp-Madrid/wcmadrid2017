@@ -476,6 +476,11 @@ body.home #after-header-widgets {
     -o-background-size: contain;
     background-size: contain;
     height: 608px;
+
+    /* Center the logo and dates */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #after-header-widgets .textwidget {
@@ -965,9 +970,9 @@ li.comment .children {
 }
 
 #page .widget {
-    background: #ffffff;
+    /*background: #ffffff;
     margin: 0 0 32px;
-    padding: 0 20px;
+    padding: 0 20px;*/
 }
 
 .widget-area .widget h3 {
