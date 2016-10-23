@@ -372,7 +372,6 @@ img {
 }
 
 .main-navigation ul.menu {
-    display: none;
     max-width: none;
     width: auto;
 }
@@ -1341,8 +1340,7 @@ input[type="submit"]:hover {
     }
     
     /* Main Menu */
-    .menu-toggle,
-    .assistive-text {
+    .menu-toggle {
         position: relative;
         float: right;
         clear: none;
@@ -1359,8 +1357,7 @@ input[type="submit"]:hover {
         background-color: #103040;
     }
     
-    .menu-toggle:before,
-    .assistive-text:before {
+    .menu-toggle:before {
         content: ' ';
         position: absolute;
         width: 0;
@@ -1498,14 +1495,6 @@ input[type="submit"]:hover {
         height: 109px;
         width: 109px;
     }
-}
-
-@media (min-width: 900px) {
-    .menu-toggle,
-    .assistive-text {
-        display: none;
-    }
-    .menu { display: block; }
 }
 
 @media (min-width: 992px) {
