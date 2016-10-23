@@ -92,6 +92,11 @@
     display: none;
 }
 
+#text-5,
+#text-6 {
+    margin: 0;
+}
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -470,11 +475,14 @@ body #after-header-widgets {
 }
 
 body.home #after-header-widgets {
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-home.jpg');
+    background-image: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-home.jpg');
+    background-position: center center;
     background-size: cover;
     height: 608px;
+    margin-top: 85px; /* Because the navigation is fixed */
     min-width: 608px;
-    background-position: center center;
+    position: relative;
+    
 
     /* Center the logo and dates */
     display: -webkit-box;
@@ -486,6 +494,12 @@ body.home #after-header-widgets {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+}
+
+.header__primary__logo {
+    bottom: 41px;
+    left: 5%;
+    position: absolute;
 }
 
 #after-header-widgets .textwidget {
