@@ -1051,6 +1051,14 @@ li.comment .children {
     border: 0;
 }
 
+.widget__body {
+    text-align: left;
+    font-family: "Open Sans";
+    line-height: inherit;
+    color: rgb(74, 74, 74);
+    font-size: 16px;
+}
+
 .jetpack_subscription_widget form {
     padding: 0;
 }
