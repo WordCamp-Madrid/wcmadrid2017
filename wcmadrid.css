@@ -331,11 +331,12 @@ img {
 
 .site-header hgroup {
     float: left;
-    width: 230px;
-    height: 80px;
+    width: 172px;
+    height: 63px;
+    margin-top: 11px;
     margin-left: 100px;
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/wordcamp-madrid-2017.png') 5px 5px no-repeat transparent;
-    background-size: contain;
+    background: url(https://2017.madrid.wordcamp.org/files/2016/10/wordcamp-madrid-2017.png) no-repeat transparent;
+    background-size: cover;
 }
 
 .site-header hgroup > * {
