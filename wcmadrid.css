@@ -1239,10 +1239,6 @@ input[type="submit"]:hover {
         margin-right: 50px;
     }
 
-
-    body.home #after-header-widgets { height: 608px; }
-
-
 }
 
 @media (min-width: 600px) and (max-width: 991px) {
@@ -1275,9 +1271,6 @@ input[type="submit"]:hover {
         clear: none;
         text-align: left;
     }
-
-
-    body.home #after-header-widgets { height: 410px; }
 
 
 }
@@ -1484,4 +1477,15 @@ input[type="submit"]:hover {
         text-align: center;
         padding: 15px 10px;
     }
+}
+
+
+
+/* Mauricio Gelves's ways: Mobile first */
+@media (max-width: 767px) { 
+    body.home #after-header-widgets { height: 410px; }
+}
+
+@media (min-width: 992px) {
+    body.home #after-header-widgets { height: 608px; }
 }
