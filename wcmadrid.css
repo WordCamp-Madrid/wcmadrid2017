@@ -347,18 +347,16 @@ img {
     -o-background-size: cover;
 }
 
-.site-header hgroup > * {
-    display: none;
-}
-
 .site-description { display: none; }
 .site-title {
     cursor: pointer;
     margin: 0;
 }
     .site-title a {
-        height: 72px;
+        color: transparent;
+        cursor: pointer;
         display: block;
+        height: 72px;
     }
 
 /*--------------------------------------------------------------
