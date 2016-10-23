@@ -479,7 +479,7 @@ img {
     clear: none;
     line-height: 75px;
     width: 100px;
-    height: 75px;
+    height: 85px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     font-weight: 600;
@@ -496,7 +496,7 @@ img {
     width: 0;
     height: 0;
     left: 20px;
-    top: 75px;
+    top: 85px;
     border-width: 8px 12px;
     border-style: solid;
     border-color: #103040 #103040 transparent transparent;
