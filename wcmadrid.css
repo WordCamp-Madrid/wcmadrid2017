@@ -339,7 +339,7 @@ img {
     width: 172px;
     height: 63px;
     margin-top: 11px;
-    margin-left: 100px;
+    margin-left: 6.5%;
     background: url(https://2017.madrid.wordcamp.org/files/2016/10/wordcamp-madrid-2017.png) no-repeat transparent;
     background-size: cover;
     -webkit-background-size: cover;
@@ -372,6 +372,7 @@ img {
 }
 
 .main-navigation ul.menu {
+    display: none;
     max-width: none;
     width: auto;
 }
@@ -1340,7 +1341,8 @@ input[type="submit"]:hover {
     }
     
     /* Main Menu */
-    .menu-toggle {
+    .menu-toggle,
+    .assistive-text {
         position: relative;
         float: right;
         clear: none;
@@ -1357,7 +1359,8 @@ input[type="submit"]:hover {
         background-color: #103040;
     }
     
-    .menu-toggle:before {
+    .menu-toggle:before,
+    .assistive-text:before {
         content: ' ';
         position: absolute;
         width: 0;
@@ -1480,6 +1483,10 @@ input[type="submit"]:hover {
 
 /* Mauricio Gelves's ways: Mobile first */
 @media (min-width: 767px) { 
+
+    .site-header hgroup { margin-left: 12%;}
+
+
     body.home #after-header-widgets { height: 410px; }
 
 
@@ -1491,6 +1498,14 @@ input[type="submit"]:hover {
         height: 109px;
         width: 109px;
     }
+}
+
+@media (min-width: 900px) {
+    .menu-toggle,
+    .assistive-text {
+        display: none;
+    }
+    .menu { display: block; }
 }
 
 @media (min-width: 992px) {
