@@ -596,6 +596,11 @@ body.home #main {
     margin: 61px auto 0;
 }
 
+
+body.home #primary:before {
+    content: "<h4 class='header__primary__h'>Blog</h4>";
+}
+
 body.home #primary {
     padding-top: 0;
 }
