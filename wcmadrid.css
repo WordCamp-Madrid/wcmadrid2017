@@ -447,14 +447,9 @@ img {
     z-index: 99999;
 }
 
-.main-navigation ul.menu li ul.sub-menu li {
-    width: 100%;
-}
-
 .main-navigation ul.menu li ul.sub-menu li > a {
     display: block;
     line-height: 46px;
-    width: 100%;
 }
 
 .main-navigation ul.menu li ul.sub-menu li > a:hover {
