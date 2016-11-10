@@ -657,8 +657,9 @@ body.home #primary:before {
     font-size: 24px;
 }
 
-body.home #primary {
-    padding-top: 20px;
+body.home #primary,
+body.home #secondary {
+    padding-top: 25px;
 }
 
 .site-content {
