@@ -502,7 +502,7 @@ img {
 5.0 Hero Area
 --------------------------------------------------------------*/
 body #after-header-widgets {
-    background: url('https://2017.madrid.wordcamp.org/files/2016/10/bg-site.png');
+    background: url('https://2017.madrid.wordcamp.org/files/2016/11/bg-site.png');
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -640,17 +640,17 @@ body.home #after-header-widgets {
 }
 
 body #main {
-    margin: 100px auto 0;
+    margin: 70px auto 0;
 }
 
 body.home #main {
-    margin: 61px auto 0;
+    margin: 70px auto 0;
 }
 
 
 body.home #primary:before {
     content: "Blog";
-    padding-left: 40px;
+    padding-left: 20px;
     margin-bottom: 20px;
     display: block;
     font-family: "Kreon";
@@ -906,7 +906,7 @@ p.wp-caption-text,
     width: 0;
     height: 0;
     left: 20px;
-    bottom: -12px;
+    bottom: -11px;
     border-width: 6px 9px;
     border-style: solid;
     border-color: #f4bd5d #f4bd5d transparent transparent;
@@ -916,6 +916,14 @@ p.wp-caption-text,
     line-height: 34px;
     font-size: 34px;
 }
+
+/* *** Organizers Page *** */
+.wcorg-organizers .wcorg-organizer .wcorg-organizer-description > img {
+    position: relative;
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
 
 /*--------------------------------------------------------------
 7.0 Comment Form & Comments
@@ -1166,12 +1174,13 @@ a.sponsor-logo:hover {
 --------------------------------------------------------------*/
 #colophon {
     clear: both;
-    height: 85px;
+    height: 70px;
     color: #80d2d0;
     background-color: #17465d;
 }
 
 .site-footer a {
+    font-size: 0.8125em; 
     color: #fff;
 }
 
@@ -1180,8 +1189,8 @@ a.sponsor-logo:hover {
 }
 
 .site-footer .site-info {
-    height: 85px;
-    line-height: 85px;
+    height: 70px;
+    line-height: 70px;
 }
 
 .site-footer .site-info-generator {
@@ -1359,7 +1368,7 @@ input[type="submit"]:hover {
     .hentry,
     .single #content,
     #secondary .widget {
-        padding: 30px 20px;
+        padding: 30px 0px;
     }
     
     blockquote {
@@ -1477,7 +1486,7 @@ input[type="submit"]:hover {
         display: block;
         float: none;
         text-align: center;
-        padding: 15px 10px;
+        padding: 10px;
     }
 }
 
