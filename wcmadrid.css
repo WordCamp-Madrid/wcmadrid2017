@@ -671,7 +671,7 @@ body.home #secondary {
 
 .hentry {
     margin-bottom: 40px;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 #content .hentry:first-child {
