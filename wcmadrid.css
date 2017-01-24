@@ -1268,6 +1268,10 @@ input[type="submit"]:hover {
 #tix-coupon-container {
     margin-top: 2rem;
 }
+
+li#menu-item-1495 {
+    background: #f4bd5d;
+}
 /*--------------------------------------------------------------
 13.0 Responsive Design
 --------------------------------------------------------------*/
