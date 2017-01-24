@@ -1278,6 +1278,9 @@ li#menu-item-1495 > a {
 li#menu-item-1495 > a:hover {
     color:white;
 }
+li#menu-item-1495.current-menu-item > a {
+    color:white;
+}
 /*--------------------------------------------------------------
 13.0 Responsive Design
 --------------------------------------------------------------*/
