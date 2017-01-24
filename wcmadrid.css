@@ -17,7 +17,8 @@
 9.0 Footer
 10.0 Page Styles
 11.0 Forms
-12.0 Responsive Design
+12.0 Tickets page
+13.0 Responsive Design
 
 /*--------------------------------------------------------------
 1.0 Reset
@@ -1252,7 +1253,23 @@ input[type="submit"]:hover {
 }
 
 /*--------------------------------------------------------------
-12.0 Responsive Design
+12.0 Tickets page
+--------------------------------------------------------------*/
+#tix-coupon-link {
+    display: inline-block;
+    margin-top: 2rem;
+    border: 1px solid #17465d;
+    padding: 3px 7px;
+}
+#tix-coupon-link:hover {
+    background:#17465d;
+    color:white;
+}
+#tix-coupon-container {
+    margin-top: 2rem;
+}
+/*--------------------------------------------------------------
+13.0 Responsive Design
 --------------------------------------------------------------*/
 @media screen and (max-width: 1140px) {
     .main-navigation .menu,
