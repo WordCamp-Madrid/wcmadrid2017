@@ -790,6 +790,10 @@ a.more-link:hover,
     top: 0;
     left: 0;
 }
+.entry-content .speaker-avatar {
+	float: left;
+	margin: 0 15px 8px 0;
+}
 
 .wcorg-session img {
     top: 0;
