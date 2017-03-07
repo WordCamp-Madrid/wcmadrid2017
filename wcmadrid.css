@@ -795,6 +795,38 @@ a.more-link:hover,
 	margin: 0 15px 8px 0;
 }
 
+
+.wcb-speaker-joan-artes,
+.wcb-speaker-alejandro-gil-mialdea,
+.wcb-speaker-vanesa-gomez-del-rio,
+.wcb-speaker-ivelina-dimova,
+.wcb-speaker-pablo-poveda,
+.wcb-speaker-eric-zeidan {
+    position: relative;
+    background-color: rgba(0,255,0,0.1) !important;
+}
+
+.wcb-speaker-joan-artes:after,
+.wcb-speaker-alejandro-gil-mialdea:after,
+.wcb-speaker-vanesa-gomez-del-rio:after,
+.wcb-speaker-ivelina-dimova:after,
+.wcb-speaker-pablo-poveda:after,
+.wcb-speaker-eric-zeidan:after {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    content: "Speedtalk";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2.session-speakers {
+    margin-top: 25px;
+}
+
+
+
 .wcorg-session img {
     top: 0;
 }
@@ -1066,6 +1098,13 @@ li.comment .children {
     padding: 0;
     border: 0;
 }
+#secondary-sidebar .widget-title {
+    padding: 10px 10px 0 10px;
+}
+#secondary-sidebar .textwidget {
+    padding: 0px 10px 10px 10px;
+}
+
 
 .widget__body {
     text-align: left;
