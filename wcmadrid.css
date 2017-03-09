@@ -1454,8 +1454,13 @@ li#menu-item-1495.current-menu-item > a {
         margin-left: 0;
     }
     
-    #tix-attendees .tix-columns-2 li {
+    #tix-attendees .tix-columns-2 li,
+    #tix-attendees .tix-columns-3 li {
         width: 100%;
+    }
+    #tix-attendees .avatar {
+        width: 96px !important;
+        height: 96px !important;
     }
     
     .main-small-navigation .menu {
