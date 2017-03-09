@@ -1461,6 +1461,10 @@ li#menu-item-1495.current-menu-item > a {
     #tix-attendees .avatar {
         width: 96px !important;
         height: 96px !important;
+        margin-right: 15px;
+    }
+    #tix-attendees .tix-field {
+        font-size: 16px !important;
     }
     
     .main-small-navigation .menu {
